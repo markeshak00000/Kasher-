@@ -1,0 +1,17 @@
+name: Build Kasher Windows
+on: [push]
+jobs:
+  build-win:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm install
+      - run: mkdir www -Force; Copy-Item index.html www/ -Force
+      - run: npm run build:win
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Kasher-Windows-EXE
+          path: dist/*.exe
