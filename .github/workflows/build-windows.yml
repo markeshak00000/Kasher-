@@ -13,5 +13,5 @@ jobs:
       - run: npm run build:win
       - uses: actions/upload-artifact@v4
         with:
-          name: Kasher-Windows-EXE
+          name: Lana-Market-Windows-EXE
           path: dist/*.exe
