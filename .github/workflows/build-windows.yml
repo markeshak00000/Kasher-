@@ -1,4 +1,4 @@
-name: Build Kasher Windows
+name: Lana-Market-Windows-EXE
 on: [push]
 jobs:
   build-win:
